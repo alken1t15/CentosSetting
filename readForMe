@@ -1,0 +1,73 @@
+1)sudo yum list postgresql*
+2)sudo yum install rpm postgresql-server
+3)sudo postgresql-setup initdb
+4)sudo systemctl enable postgresql
+5)sudo systemctl start postgresql
+6)sudo systemctl status postgresql
+
+7)sudo su - postgres
+8)psql
+9)\connect postgres
+
+
+6-11) sudo systemctl start postgresql
+
+sudo -u postgres createdb имяБд
+
+sudo -u postgres psql
+
+запрос таблицы
+
+sudo vi/var/lib/pgsql/data/pg_hba.conf
+
+:w
+
+systemctl restart postgresql
+
+sudo -i -u postgreql
+
+psql
+
+ALTER USER postgres PASSWORD 'postgres'
+
+\q
+
+exit
+
+sudo vi/var/lib/pgsql/data/pg_hba.conf
+
+:w
+
+systemctl restart postgresql
+
+docker
+
+yum -y update
+
+yum install docker -y
+
+systemctl start docker
+
+chkconfig docker on
+
+пров sudo docker images
+
+
+
+docker
+
+Dockerfile
+
+FROM openjdk:17-jdk-slim
+WORKDIR /app
+COPY target/SpringStudyForWSK2-0.0.1-SNAPSHOT.jar .
+CMD ["java","-jar","my-spring-app"]]
+
+docker build -t my-spring-app .
+sudo docker run --net=host -p 8080:8080 -t my-spring-app
+
+
+
+java 
+
+yum install java-devel
